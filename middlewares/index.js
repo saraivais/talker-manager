@@ -6,14 +6,14 @@ function validateLoginPassword(request, _response, next) {
 
   if (!password) {
     error.message = 'O campo "password" é obrigatório';
-    next(error);
+    return next(error);
   }
   if (password.length < 6) {
     error.message = 'O "password" deve ter pelo menos 6 caracteres';
-    next(error);
+    return next(error);
   }
 
-  next();
+  return next();
 }
 
 function validateLoginEmail(request, _response, next) {
@@ -22,16 +22,16 @@ function validateLoginEmail(request, _response, next) {
 
   if (!email) {
     error.message = 'O campo "email" é obrigatório';
-    next(error);
+    return next(error);
   }
 
   const validateEmail = /\S+@\S+\.\S+/;
   if (!validateEmail.test(email)) {
     error.message = 'O "email" deve ter o formato "email@email.com"';
-    next(error);
+    return next(error);
   }
 
-  next();
+  return next();
 }
 
 function validateToken(request, _response, next) {
@@ -40,15 +40,15 @@ function validateToken(request, _response, next) {
 
   if (!authorization) {
     error.message = 'Token não encontrado';
-    next(error);
+    return next(error);
   }
   
   if (authorization.length !== 16) {
     error.message = 'Token inválido';
-    next(error);
+    return next(error);
   }
 
-  next();
+  return next();
 }
 
 function validateTalkerName(request, _response, next) {
@@ -57,15 +57,15 @@ function validateTalkerName(request, _response, next) {
 
   if (!name) {
     error.message = 'O campo "name" é obrigatório';
-    next(error);
+    return next(error);
   }
 
   if (name.length < 3) {
     error.message = 'O "name" deve ter pelo menos 3 caracteres';
-    next(error);
+    return next(error);
   }
 
-  next();
+  return next();
 }
 
 function validateTalkerAge(request, _response, next) {
@@ -74,15 +74,15 @@ function validateTalkerAge(request, _response, next) {
 
   if (!age) {
     error.message = 'O campo "age" é obrigatório';
-    next(error);
+    return next(error);
   }
 
   if (Number(age) < 18) {
     error.message = 'A pessoa palestrante deve ser maior de idade';
-    next(error);
+    return next(error);
   }
 
-  next();
+  return next();
 }
 
 function validateTalkerTalk(request, _response, next) {
@@ -90,10 +90,10 @@ function validateTalkerTalk(request, _response, next) {
   const error = { status: 400 };
   if (!talk) {
     error.message = 'O campo "talk" é obrigatório';
-    next(error);
+    return next(error);
   }
 
-  next();
+  return next();
 }
 
 function validateTalkerRate(request, _response, next) {
@@ -101,17 +101,17 @@ function validateTalkerRate(request, _response, next) {
   const { rate } = talk;
   const error = { status: 400 };
 
-  if (!rate) {
+  if (rate !== 0 && !rate) {
     error.message = 'O campo "rate" é obrigatório';
-    next(error);
+    return next(error);
   }
 
   if (Number(rate) > 5 || Number(rate) < 1) {
     error.message = 'O campo "rate" deve ser um inteiro de 1 à 5';
-    next(error);
+    return next(error);
   }
   
-  next();
+  return next();
 }
 
 function validateDate(dateString) {
@@ -126,15 +126,15 @@ function validateTalkerWatchedAt(request, _response, next) {
 
   if (!watchedAt) {
     error.message = 'O campo "watchedAt" é obrigatório';
-    next(error);
+    return next(error);
   }
 
   if (!validateDate(watchedAt)) {
     error.message = 'O campo "watchedAt" deve ter o formato "dd/mm/aaaa"';
-    next(error);
+    return next(error);
   }
 
-  next();
+  return next();
 }
 
 module.exports = { 
