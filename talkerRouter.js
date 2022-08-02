@@ -17,7 +17,6 @@ talkerRouter.get('/search', middlewares.validateToken, async (request, response)
   const filteredFile = parsedFile.filter(({ name }) => searchRegex.test(name));
 
   return response.status(200).json(filteredFile);
-
 });
 
 // requisito 2~
