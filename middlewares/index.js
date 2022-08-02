@@ -7,10 +7,10 @@ function validateLoginPassword(request, response, next) {
     next(error);
   }
   if (password.length < 6) {
-    error.message = 'O campo "password" deve ter pelo menos 6 caracteres';
+    error.message = 'O "password" deve ter pelo menos 6 caracteres';
     next(error);
   }
-  
+
   next();
 }
 
@@ -25,7 +25,7 @@ function validateLoginEmail(request, response, next) {
 
   const validateEmail = /\S+@\S+\.\S+/;
   if (!validateEmail.test(email)) {
-    error.message = 'O campo "email" deve ter o formato "email@email.com"';
+    error.message = 'O "email" deve ter o formato "email@email.com"';
     next(error);
   }
 
