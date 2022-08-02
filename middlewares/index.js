@@ -32,7 +32,23 @@ function validateLoginEmail(request, response, next) {
   next();
 }
 
+function validateToken(request, response, next) {
+  const { authorization } = request.headers;
+  const error = { status: 401 };
+
+  if (!authorization) {
+    error.message = 'Token não encontrado';
+    next(error);
+  }
+  
+  if (authorization.length !== 16) {
+    error.message = 'Token inválido';
+    next(error);
+  }
+}
+
 module.exports = { 
   validateLoginPassword,
   validateLoginEmail,
+  validateToken,
 };
