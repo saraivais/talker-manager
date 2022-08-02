@@ -35,6 +35,21 @@ talkerRouter.get('/', async (request, response) => {
 
 // daqui pra baixo, faz validação dos dados que vem no body~
 talkerRouter.use(middlewares.validateToken);
+
+// requisito 7~
+
+talkerRouter.delete('/:id', async (request, response) => {
+  const talkerFile = await fs.readFile(talkerJsonFile);
+  const parsedFile = await JSON.parse(talkerFile);
+
+  const { id } = request.params;
+
+  const newTalkerArray = parsedFile.filter((talker) => talker.id !== Number(id));
+  const newTalkerContent = JSON.stringify(newTalkerArray);
+  await fs.writeFile(talkerJsonFile, newTalkerContent);
+  return response.status(204).end();
+});
+
 talkerRouter.use(middlewares.validateTalkerName);
 talkerRouter.use(middlewares.validateTalkerAge);
 talkerRouter.use(middlewares.validateTalkerTalk);
@@ -56,7 +71,7 @@ talkerRouter.put('/:id', async (request, response) => {
     }
     return talker;
   });
-  console.log(newTalkerArray);
+
   const newTalkerContent = JSON.stringify(newTalkerArray);
   // console.log(newTalkerContent);
   await fs.writeFile(talkerJsonFile, newTalkerContent);
