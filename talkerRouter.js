@@ -5,6 +5,8 @@ const middlewares = require('./middlewares');
 const talkerRouter = express.Router();
 talkerRouter.use(express.json());
 
+const talkerJsonFile = 'talker.json';
+
 // requisito 2~
 talkerRouter.get('/:id', async (request, response) => {
   const { id } = request.params;
@@ -21,7 +23,7 @@ talkerRouter.get('/:id', async (request, response) => {
 
 // requisito 1~
 talkerRouter.get('/', async (request, response) => {
-  const talkerFile = await fs.readFile('talker.json');
+  const talkerFile = await fs.readFile(talkerJsonFile);
   const parsedFile = await JSON.parse(talkerFile);
 
   const getReturn = [];
@@ -39,12 +41,34 @@ talkerRouter.use(middlewares.validateTalkerTalk);
 talkerRouter.use(middlewares.validateTalkerRate);
 talkerRouter.use(middlewares.validateTalkerWatchedAt);
 
+// requisito 6~
+talkerRouter.put('/:id', async (request, response) => {
+  const { id } = request.params;
+  const { name, age, talk } = request.body;
+
+  const talkerFile = await fs.readFile(talkerJsonFile);
+  const parsedFile = await JSON.parse(talkerFile);
+
+  const editedTalker = { name, age, id: Number(id), talk };
+  const newTalkerArray = parsedFile.map((talker) => {
+    if (talker.id === Number(id)) {
+      return editedTalker;
+    }
+    return talker;
+  });
+  console.log(newTalkerArray);
+  const newTalkerContent = JSON.stringify(newTalkerArray);
+  // console.log(newTalkerContent);
+  await fs.writeFile(talkerJsonFile, newTalkerContent);
+  return response.status(200).json(editedTalker);
+});
+
 // requisito 5~
 talkerRouter.post('/', 
   async (request, response) => {
   const { name, age, talk } = request.body;
   const { watchedAt, rate } = talk;
-  const talkerFile = await fs.readFile('talker.json');
+  const talkerFile = await fs.readFile(talkerJsonFile);
   const parsedFile = await JSON.parse(talkerFile);
   const nextId = parsedFile.length + 1;
 
@@ -57,7 +81,7 @@ talkerRouter.post('/',
 
   const newFileContent = [...parsedFile, newTalker];
   const newFileContentParsed = JSON.stringify(newFileContent);
-  await fs.writeFile('talker.json', newFileContentParsed);
+  await fs.writeFile(talkerJsonFile, newFileContentParsed);
 
   return response.status(201).json(newTalker);
 });
