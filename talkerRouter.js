@@ -7,6 +7,19 @@ talkerRouter.use(express.json());
 
 const talkerJsonFile = 'talker.json';
 
+// requisito 8~ adiciona o middleware do token
+talkerRouter.get('/search', middlewares.validateToken, async (request, response) => {
+  const { q } = request.query;
+  const searchRegex = new RegExp(q);
+  const talkerFile = await fs.readFile('talker.json');
+  const parsedFile = await JSON.parse(talkerFile);
+
+  const filteredFile = parsedFile.filter(({ name }) => searchRegex.test(name));
+
+  return response.status(200).json(filteredFile);
+
+});
+
 // requisito 2~
 talkerRouter.get('/:id', async (request, response) => {
   const { id } = request.params;
@@ -37,7 +50,6 @@ talkerRouter.get('/', async (request, response) => {
 talkerRouter.use(middlewares.validateToken);
 
 // requisito 7~
-
 talkerRouter.delete('/:id', async (request, response) => {
   const talkerFile = await fs.readFile(talkerJsonFile);
   const parsedFile = await JSON.parse(talkerFile);
