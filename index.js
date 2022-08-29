@@ -1,14 +1,15 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const swaggerUi = require('swagger-ui-express');
 const { talkerRouter } = require('./talkerRouter');
 const middlewares = require('./middlewares');
 const { errorMiddleware } = require('./errorMiddleware');
 const generateToken = require('./generateToken');
+const swaggerDocument = require('./swagger-output.json');
 
 const app = express();
 app.use(bodyParser.json());
 
-const HTTP_OK_STATUS = 200;
 const PORT = '3000';
 
 // iniciando rota talker~
@@ -23,10 +24,7 @@ app.post('/login',
   return response.status(200).json({ token: `${randomToken}` });
 });
 
-// não remova esse endpoint, e para o avaliador funcionar
-app.get('/', (_request, response) => {
-  response.status(HTTP_OK_STATUS).send();
-});
+app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use(errorMiddleware);
 
