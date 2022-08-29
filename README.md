@@ -12,17 +12,17 @@ This project was developed using Node.js, Node.js fs module, Express.js, HTTP, N
 <br>
 <img src="https://cdn.iconscout.com/icon/free/png-256/node-js-1174925.png" height="80" alt="nodejs-icon"/>
 <br>
-<p>Node.js and its module fs was used to create the basic structure of this CRUD API</p>
+<p>Node.js and its module fs was used to create the basic structure of this CRUD API.</p>
 <img src="https://cdn.iconscout.com/icon/free/png-256/nodemon-226039.png" height="80" alt="nodemon-icon"/>
 <br>
 <p>Nodemon was used for script monitoring during the API development.</p>
 <img src="https://www.atatus.com/images/devicon/icon-express.svg" height="80" alt="express-icon"/>
 <br>
 <p>Express.js is a Node.js web application framework, chosen for it's robust tooling for HTTP servers.</p>
-<img src="https://miro.medium.com/max/512/1*fVBL9mtLJmHIH6YpU7WvHQ.png" height="80" alt="postman-icon"/>
+<img src="https://miro.medium.com/max/512/1*fVBL9mtLJmHIH6YpU7WvHQ.png" height="70" alt="postman-icon"/>
 <br>
-<p>Postman is an API platform to aid API design, construction and testing.</p>
-<img src="https://seeklogo.com/images/S/swagger-logo-A49F73BAF4-seeklogo.com.png" alt="swagger-logo"/>
+<p>Postman is a platform to aid API design, construction and testing.</p>
+<img src="https://seeklogo.com/images/S/swagger-logo-A49F73BAF4-seeklogo.com.png" height="80" alt="swagger-logo"/>
 <br>
 <p>Swagger was used to develop this API's documentation, aiming to provide a better understanding of its features.</p>
 
@@ -57,11 +57,26 @@ This project was developed using Node.js, Node.js fs module, Express.js, HTTP, N
   <summary>Clique para expandir!</summary>
   
   ### Descrição
-
-Este projeto é uma API CRUD (Create, Read, Update e Delete) de registro de palestrantes na qual é possível cadastrar, pesquisar, editar e deletar informações.
+Talker Manager é uma API CRUD (Criar, Ler, Atualizar e Excluir) de locutores. Essa API possui endpoints que permitem ao usuário ler e gravar em um arquivo usando o módulo Node.js fs. O desenvolvimento deste projeto me permitiu colocar em prática o que aprendi sobre Node.js, Express.js e Protocolos HTTP durante o módulo Back-end no Trybe.
 
 ### Tecnologias e Ferramentas
 Este projeto foi desenvolvido utilizando Node.js, módulo fs do Node.js, Express.js, Nodemon e Postman.
+<br>
+<img src="https://cdn.iconscout.com/icon/free/png-256/node-js-1174925.png" height="80" alt="nodejs-icon"/>
+<br>
+<p>Node.js e seu módulo fs foram usados ​​para criar a estrutura básica desta API CRUD.</p>
+<img src="https://cdn.iconscout.com/icon/free/png-256/nodemon-226039.png" height="80" alt="nodemon-icon"/>
+<br>
+<p>Nodemon foi usado para monitoramento de script durante o desenvolvimento da API.</p>
+<img src="https://www.atatus.com/images/devicon/icon-express.svg" height="80" alt="express-icon"/>
+<br>
+<p>Express.js é uma estrutura de aplicativo da Web Node.js, escolhida por suas ferramentas robustas para servidores HTTP.</p>
+<img src="https://miro.medium.com/max/512/1*fVBL9mtLJmHIH6YpU7WvHQ.png" height="70" alt="postman-icon"/>
+<br>
+<p>Postman é uma plataforma para auxiliar no design, construção e teste de APIs.</p>
+<img src="https://seeklogo.com/images/S/swagger-logo-A49F73BAF4-seeklogo.com.png" height="80" alt="swagger-logo"/>
+<br>
+<p>O Swagger foi utilizado para desenvolver a documentação desta API, visando proporcionar um melhor entendimento de suas funcionalidades.</p>
 
 ### Instalação
 
