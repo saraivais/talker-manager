@@ -1,10 +1,12 @@
 # TALKER MANAGER
 
+![image](https://user-images.githubusercontent.com/96205316/187313316-1fb68184-0832-4823-b0e5-b7fa45a8df70.png)
+
 ## English 🇬🇧
 <details>
-  <summary>Click to expand!</summary>
+<summary>Click to expand!</summary>
   
-  ### Description
+### Description
 Talker Manager is a CRUD (Create, Read, Update and Delete) API of talkers. This API has endpoints that allow the user to read and write in a file using the Node.js fs module. The development of this project allowed me to put in practice what I learned of Node.js, Express.js and HTTP Protocols during the Back-end module at Trybe.
 
 ### Technologies and Tools
@@ -88,16 +90,16 @@ Este projeto foi desenvolvido utilizando Node.js, módulo fs do Node.js, Express
 2. Acesse o diretório usando o comando **cd** e clone o repositório:
 ```
   cd saraivais-projects
-  git clone git@github.com:saraivais/star-wars-planet-search.git
+  git clone git@github.com:saraivais/talker-manager.git
 ```
 
 3. Acesse o diretório do projeto e instale suas dependências:
 ```
-  cd star-wars-planet-search
+  cd talker-manager
   npm i
 ```
 
-4. Por fim, use o comando **npm start** e acesse o projeto via navegador, usando a seguinte url
+4. Por fim, use o comando **npm start** e acesse o a documentação da API via navegador, usando a seguinte url
 ```
   http://localhost:3000
 ```
