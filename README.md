@@ -1,4 +1,4 @@
-# TALKER MANAGER
+<h1 align="center">TALKER MANAGER 🎤</h1>
 
 ![image](https://user-images.githubusercontent.com/96205316/187313316-1fb68184-0832-4823-b0e5-b7fa45a8df70.png)
 
