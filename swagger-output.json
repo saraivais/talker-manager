@@ -22,10 +22,10 @@
               "type": "object",
               "properties": {
                 "email": {
-                  "example": "any"
+                  "example": "email@email.com"
                 },
                 "password": {
-                  "example": "any"
+                  "example": "anypassword"
                 }
               }
             }
@@ -122,13 +122,16 @@
               "type": "object",
               "properties": {
                 "name": {
-                  "example": "any"
+                  "example": "Anthony Stark"
                 },
                 "age": {
-                  "example": "any"
+                  "example": 45
                 },
                 "talk": {
-                  "example": "any"
+                  "example": {
+                    "watchedAt": "22/10/2015",
+                    "rate": 10
+                  }
                 }
               }
             }
@@ -166,13 +169,16 @@
               "type": "object",
               "properties": {
                 "name": {
-                  "example": "any"
+                  "example": "Bruce Banner"
                 },
                 "age": {
-                  "example": "any"
+                  "example": "40"
                 },
                 "talk": {
-                  "example": "any"
+                  "example": {
+                    "watchedAt": "10/09/2012",
+                    "rate": 9
+                  }
                 }
               }
             }
