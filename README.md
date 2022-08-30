@@ -39,7 +39,7 @@ After the project's development, **Swagger** was then used to design and write i
   npm i
 ```
 
-4. Lastly, use the **npm start** command and access the API documentation via browser, using the following url
+4. Lastly, use the **npm start** command and access the **API documentation** via browser, using the following url
 ```
   http://localhost:3000
 ```
@@ -83,7 +83,7 @@ Após o desenvolvimento do projeto, **Swagger** foi usado para projetar e escrev
   npm i
 ```
 
-4. Por fim, use o comando **npm start** e acesse o a documentação da API via navegador, usando a seguinte url
+4. Por fim, use o comando **npm start** e acesse a **documentação da API** via navegador, usando a seguinte url
 ```
   http://localhost:3000
 ```
