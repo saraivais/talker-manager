@@ -6,10 +6,10 @@
 <details>
 <summary>Click to expand!</summary>
   
-### Description
+### Description 📝
 Talker Manager is a CRUD (Create, Read, Update and Delete) API of talkers. This API has endpoints that allow the user to read and write in a file using the Node.js fs module. The development of this project allowed me to put in practice what I learned of Node.js, Express.js and HTTP Protocols during the Back-end module at Trybe.
 
-### Technologies and Tools
+### Technologies and Tools 🔧
 <img src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white" alt="docker-logo"/>
 <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="nodejs-logo"/>
 <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" alt="express-logo"/>
@@ -20,7 +20,7 @@ Talker Manager was developed using **Docker** to create an isolated development 
 **Nodemon** and **Postman** were used as development tools, as Nodemon allowed me to monitor scripts during construction and Postman let me test and design the endpoints.
 After the project's development, **Swagger** was then used to design and write it's documentation.
 
-### Installation
+### Installation 📋
 
 1. Create a directory using the **mkdir** command:
 ```
@@ -50,10 +50,10 @@ After the project's development, **Swagger** was then used to design and write i
 <details>
   <summary>Clique para expandir!</summary>
   
-  ### Descrição
+  ### Descrição 📝
 Talker Manager é uma API CRUD (Criar, Ler, Atualizar e Excluir) de locutores. Essa API possui endpoints que permitem ao usuário ler e gravar em um arquivo usando o módulo Node.js fs. O desenvolvimento deste projeto me permitiu colocar em prática o que aprendi sobre Node.js, Express.js e Protocolos HTTP durante o módulo Back-end no Trybe.
 
-### Tecnologias e Ferramentas
+### Tecnologias e Ferramentas 🔧
 <img src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white" alt="docker-logo"/>
 <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="nodejs-logo"/>
 <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" alt="express-logo"/>
@@ -64,7 +64,7 @@ O Talker Manager foi desenvolvido usando o **Docker** para criar um ambiente de 
 **Nodemon** e **Postman** foram usados ​​como ferramentas de desenvolvimento, pois o Nodemon me permitiu monitorar scripts durante a construção e o Postman me permitiu testar e projetar os endpoints.
 Após o desenvolvimento do projeto, **Swagger** foi usado para projetar e escrever sua documentação.
 
-### Instalação
+### Instalação 📋
 
 1. Crie um diretório usando o comando **mkdir**:
 ```
