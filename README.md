@@ -7,7 +7,7 @@
 <summary>Click to expand!</summary>
   
 ### Description 📝
-Talker Manager is a CRUD (Create, Read, Update and Delete) API of talkers. This API has endpoints that allow the user to read and write in a file using the Node.js fs module. The development of this project allowed me to put in practice what I learned of Node.js, Express.js and HTTP Protocols during the Back-end module at Trybe.
+Talker Manager is a CRUD (Create, Read, Update and Delete) API of talkers. This API has endpoints that allow the user to read and write in a file using the Node.js fs module. The development of this project allowed me to put in practice what I learned of Node.js, Express.js and HTTP Protocols during the Back-end module at [Trybe](https://www.betrybe.com/).
 
 ### Technologies and Tools 🔧
 <img src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white" alt="docker-logo"/>
@@ -51,7 +51,7 @@ After the project's development, **Swagger** was then used to design and write i
   <summary>Clique para expandir!</summary>
   
   ### Descrição 📝
-Talker Manager é uma API CRUD (Criar, Ler, Atualizar e Excluir) de locutores. Essa API possui endpoints que permitem ao usuário ler e gravar em um arquivo usando o módulo Node.js fs. O desenvolvimento deste projeto me permitiu colocar em prática o que aprendi sobre Node.js, Express.js e Protocolos HTTP durante o módulo Back-end no Trybe.
+Talker Manager é uma API CRUD (Criar, Ler, Atualizar e Excluir) de locutores. Essa API possui endpoints que permitem ao usuário ler e gravar em um arquivo usando o módulo Node.js fs. O desenvolvimento deste projeto me permitiu colocar em prática o que aprendi sobre Node.js, Express.js e Protocolos HTTP durante o módulo Back-end no [Trybe](https://www.betrybe.com/).
 
 ### Tecnologias e Ferramentas 🔧
 <img src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white" alt="docker-logo"/>
